@@ -7,9 +7,18 @@
 // Run locally with:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 
-import { copyFileSync } from "node:fs";
+import { copyFileSync, mkdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
 const source = new URL("./entry.png", import.meta.url);
-copyFileSync(source, join(outDir, "entry.png"));
+const dest = join(outDir, "entry.png");
+// The grader's output directory may not exist yet; create it first.
+mkdirSync(outDir, { recursive: true });
+copyFileSync(source, dest);
+// Verify the copy is complete: same byte count as the source image.
+const srcSize = statSync(source).size;
+const dstSize = statSync(dest).size;
+if (srcSize !== dstSize) {
+  throw new Error(`entry.png copy incomplete: ${dstSize} of ${srcSize} bytes`);
+}
