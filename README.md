@@ -10,7 +10,7 @@ One image that sums up the world's news of **Tuesday, 17 November 2026** — a d
 - **12 illustrated secondaries** — the Quad summit in Manila, the Trump–Xi–Putin meeting set for Thursday, Nvidia's $115.8bn quarter and the Dow's 849-point drop, the US / Mexico / Bolivia measles-free status loss, Gaza's winter aid crisis, Depardieu's guilty plea, Japan scrambling jets, Moldova shutting its airspace, Serbia's student-led majority, Mongolia's president resigning, Bangladesh's garment strike, and the An-12 crash in Siberia.
 - **A pinned world map** (stories 1–15) and **"Also on Tuesday 17 November"** — 28 more stories, from the 1,441 drones Russia says it downed to Voyager 1 nearing one light-day from Earth.
 
-The image (`entry.png`, 1024×1024, drawn programmatically with PIL from verified wire reports — Reuters, AP, AFP, BBC, Al Jazeera, WHO, UN, PAHO; contested claims marked as claims) is copied to `/output/entry.png` by `main.ts`, which validates the PNG header (1024×1024) before copying.
+The image (`entry.png`, 1024×1024, drawn programmatically with PIL from verified wire reports — Reuters, AP, AFP, BBC, Al Jazeera, WHO, UN, PAHO; contested claims marked as claims) is copied to `/output/entry.png` by `main.ts`, which validates the PNG header (1024×1024) before copying. Round 4 upgraded only the illustrations: gradient skies/seas, multi-tone smoke, explosion bursts, detailed jets/flags/icons, in-scene label chips, and numbered map pins.
 
 ## Run it
 
